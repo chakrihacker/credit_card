@@ -51,6 +51,35 @@ class _CreditCardState extends State<CreditCard>
       child: new Column(
         children: <Widget>[
           new Image.asset('assets/card-front.png', package: 'credit_card'),
+          new Container(
+            height: 100,
+            child: new CustomScrollView(
+              scrollDirection: Axis.horizontal,
+              slivers: <Widget>[
+                new SliverPadding(
+                    padding: EdgeInsets.all(20.0),
+                    sliver: new SliverList(
+                      delegate: new SliverChildListDelegate(<Widget>[
+                        new Text("Hello"),
+                        new Text("Hello"),
+                        new Text("Hello"),
+                        new Text("Hello"),
+                        new Text("Hello"),
+                        new Text("Hello"),
+                        new Text("Hello"),
+                        new Text("Hello"),
+                        new Text("Hello"),
+                        new Text("Hello"),
+                        new Text("Hello"),
+                        new Text("Hello"),
+                        new Text("Hello"),
+                        new Text("Hello"),
+                        new Text("Hello"),
+                      ]),
+                    )),
+              ],
+            ),
+          ),
         ],
       ),
     );
