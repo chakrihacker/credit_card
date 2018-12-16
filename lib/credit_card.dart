@@ -17,8 +17,7 @@ const Object PlaceHolder = {
   "cvc": "CVC"
 };
 
-class CreditCard extends StatefulWidget{
-
+class CreditCard extends StatefulWidget {
   final CreditCardValues focusedValue;
   final String brand;
   final String name;
@@ -27,8 +26,16 @@ class CreditCard extends StatefulWidget{
   final String cvc;
   final Object placeHolder;
 
-  const CreditCard({Key key, this.focusedValue, this.brand, this.name, this.number, this.expiry, this.cvc, this.placeHolder = PlaceHolder}) : super(key: key);
-
+  const CreditCard(
+      {Key key,
+      this.focusedValue,
+      this.brand,
+      this.name,
+      this.number,
+      this.expiry,
+      this.cvc,
+      this.placeHolder = PlaceHolder})
+      : super(key: key);
 
   @override
   State<StatefulWidget> createState() {
@@ -36,10 +43,16 @@ class CreditCard extends StatefulWidget{
   }
 }
 
-class _CreditCardState extends State<CreditCard> with SingleTickerProviderStateMixin {
+class _CreditCardState extends State<CreditCard>
+    with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
-    return Card(child: Image.asset('assets/card-front.png'), );
+    return new Center(
+      child: new Column(
+        children: <Widget>[
+          new Image.asset('assets/card-front.png', package: 'credit_card'),
+        ],
+      ),
+    );
   }
-
 }
